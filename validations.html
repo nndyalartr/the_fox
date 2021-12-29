@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validations</title>
+    <style>
+        .msgg{
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get">
+    <fieldset>
+        <div class="row">
+            <label for="name"> Enter Name</label>
+        </div>
+        <div class="row">
+            <input type="text" id="name">
+        </div>
+        <div class="row">
+            <label for="name">Enter Email</label>
+        </div>
+        <div class="row">
+            <input type="email" id="email">
+        </div>
+        <div class="row">
+            <label for="name">Enter Phone Number</label>
+        </div>
+        <div class="row">
+            <input type="text" id="ph">
+        </div>
+        <div class="row">
+            <label for="message"><b>Enter message</b></label>
+        </div>
+        <div class="row">
+            <input type="text" class="msgg" id="msg">
+        </div>
+        <input type="submit" value="submit" onclick="return validation()">
+    </fieldset>
+    <div class="display">
+
+    </div>
+    </form>
+    <script>
+        function validation(){
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var ph = document.getElementById("ph").value;
+                var msg = document.getElementById("msg").value;                     
+                if (name =="" || name == null ){
+                    alert("please enter your name");
+                    document.getElementById("name").style.borderColor='red';                             
+                }
+                if (email =="" || email == null ){
+                    alert("please enter your email"); 
+                    document.getElementById("name").style.borderColor='red';                     
+                }
+                if (ph =="" || ph == null ){
+                    alert("please enter your Phone Number"); 
+                    document.getElementById("ph").style.borderColor='red';                    
+                }
+                if (msg =="" || msg == null ){
+                    alert("please enter your message"); 
+                    document.getElementById("msg").style.borderColor='red';                    
+                } 
+                else{
+                    //txt = name + ph;
+                    //document.write(txt);
+                    document.write('<b>your name is : ' + name + "</br>" + "your email :" + email + "</br>" + "your Phone No :" + ph + "</br>" + "your msg :" + msg);
+                }                  
+            }        
+    </script>
+</body>
+</html>
